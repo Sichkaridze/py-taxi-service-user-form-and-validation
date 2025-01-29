@@ -15,7 +15,7 @@ from .views import (
     ManufacturerDeleteView,
     DriverCreateView,
     DriverLicenseUpdateView,
-    DriverDeleteView,
+    DriverDeleteView, toggle_assign_to_car,
 )
 
 urlpatterns = [
@@ -59,6 +59,11 @@ urlpatterns = [
         "drivers/<int:pk>/delete/",
         DriverDeleteView.as_view(),
         name="driver-delete",
+    ),
+    path(
+        "cars/<int:pk>/toggle-assign/",
+        toggle_assign_to_car,
+        name="toggle-car-assign",
     ),
 ]
 
