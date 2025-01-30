@@ -4,7 +4,6 @@ from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
 
 
-
 class DriverCreationForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = get_user_model()
